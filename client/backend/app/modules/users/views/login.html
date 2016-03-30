@@ -1,0 +1,45 @@
+<div class="login_panel label_input prepend open" style="margin-top:-300px;">
+	<div class="login_inner wx">
+		<form class="form login_form" ng-submit="login()">
+
+		<fieldset class="login_fieldset">
+			<legend class="login_legend">登录</legend>
+			<div class="login_input_area">
+				<span class="login_input_box first">
+					<label class="login_label">账号</label>
+					<input type="text" placeholder="请填写登录账号" class="frm_input" name="account" ng-model="account">
+				</span>
+				<span class="login_input_box last">
+					<label class="login_label">密码</label>
+					<input type="password" placeholder="请填写密码" class="frm_input" name="password" ng-model="password">
+				</span>
+			</div>
+			<div class="login_code_area" style="display:none">
+				<div class="verifycode">xxx</div>
+			</div>
+
+			<div class="login_valid_area">
+				<p class="frm_msg fail">
+					<span for="passwd" class="frm_msg_content" style="display: inline;">{{errorMsg}}</span>
+				</p>
+			</div>			
+
+			<div class="login_function_area">
+				<label class="frm_checkbox_label">
+					<input type="checkbox" class="frm_checkbox">
+					<i class="icon_checkbox"></i>
+					<span class="lbl_content">记住帐号</span>
+				</label>
+				<a href="javascript:void(0);" class="jsUrlLink">忘记密码</a>
+			</div>
+
+			<div class="login_valid_area"></div>
+
+			<div class="login_tool_area">
+				<button class="btn btn_primary btn_login" type="submit">登录</button>
+			</div>
+		</fieldset>
+
+		</form>
+	</div>
+</div>

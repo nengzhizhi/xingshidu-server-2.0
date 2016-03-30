@@ -1,0 +1,11 @@
+<div class="frm_control_group">
+	<div class="frm_label" ng-if="to.label">
+		{{to.label}}
+		{{to.required ? '*' : ''}}
+	</div>
+	<div class="frm_controls">
+		<span class="frm_input_box">
+			<formly-transclude></formly-transclude>
+		</span>
+	</div>
+</div>

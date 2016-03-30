@@ -1,0 +1,32 @@
+{
+  "name": "Share",
+  "base": "PersistedModel",
+  "properties": {
+    "userId": {
+      "type": "string"
+    },
+    "created": {
+      "type": "number",
+      "required": true
+    },
+    "status": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "photos": {
+      "type": "hasMany",
+      "model": "Photo",
+      "foreignKey": "shareId"
+    },
+    "creater": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "userId"
+    }
+  },
+  "acls": [
+  ],
+  "methods": {}
+}

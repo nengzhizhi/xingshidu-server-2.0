@@ -1,0 +1,48 @@
+{
+  "name": "Photo",
+  "base": "PersistedModel",
+  "properties": {
+    "png_url": {
+      "type": "string"
+    },
+    "gif_url": {
+      "type": "string"
+    },
+    "vote_number": {
+      "type": "number"
+    },
+    "created": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "share": {
+      "type": "belongsTo",
+      "model": "Share",
+      "foreignKey": "shareId",
+      "required": true
+    },
+    "creater": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "userId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "create" 
+    }
+  ],
+  "methods": {}
+}

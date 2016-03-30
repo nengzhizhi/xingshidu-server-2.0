@@ -1,0 +1,51 @@
+{
+  "local": {
+    "provider": "local",
+    "module": "passport-local",
+    "usernameField": "username",
+    "passwordField": "password",
+    "authPath": "/auth/local",
+    "successRedirect": "/auth/account",
+    "failureRedirect": "/local",
+    "failureFlash": true
+  },
+  "weixin-client-login": {
+    "provider": "weixin",
+    "module": "passport-weixin",
+    "strategy": "Strategy",
+    "clientID": "wx155e0eab7dcc6be0",
+    "clientSecret": "0a0ac184b5234ce3a78db4c08e496013",
+    "callbackURL": "http://www.vgame.tv/auth/weixin_client/callback",
+    "requireState": false,
+    "authorizationURL": "https://open.weixin.qq.com/connect/oauth2/authorize",
+    "successRedirect": "/auth/account",
+    "failureRedirect": "/login",
+    "authPath": "/auth/weixin_client",    
+    "scope": "snsapi_userinfo",
+    "profile": true
+  },
+  "open-id": {
+    "provider": "weixin",
+    "module": "passport-openid",
+    "returnURL": "http://localhost:3000/auth/openid/return",
+    "realm": "http://localhost:3000/",
+    "authPath": "/auth/openid",
+    "successRedirect": "/auth/account",
+    "failureRedirect": "/login"
+  },
+  "weixin-login": {
+    "provider": "weixin",
+    "module": "passport-weixin",
+    "strategy": "Strategy",
+    "clientID": "wx06397a22c53cf0e8",
+    "clientSecret": "b44fd805e1feec70015d31b5da26aa35",
+    "callbackURL": "http://www.vgame.tv/auth/weixin/callback",
+    "authPath": "/auth/weixin",
+    "callbackPath": "/auth/weixin/callback",
+    "successRedirect": "/auth/account",
+    "failureRedirect": "/login",
+    "scope": ["snsapi_login"],
+    "requireState": false,
+    "failureFlash": true
+  }
+}

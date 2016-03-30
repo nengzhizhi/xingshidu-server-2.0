@@ -1,0 +1,42 @@
+<div class="global_mod user_global_opr float_layout">
+	<div class="global_info">
+		<div class="search_bar" style="margin-bottom:30px">
+			<span class="frm_input_box search with_del append ">
+				<a class="del_btn jsSearchInputClose" href="javascript:" style="display:none">
+					<i class="icon_search_del"></i>&nbsp;
+				</a>
+				<a href="javascript:" class="frm_input_append jsSearchInputBt">
+					<i class="icon16_common search_gray">搜索</i>&nbsp;
+				</a>
+				<input type="text" value="" class="frm_input jsSearchInput" placeholder="xx">
+			</span>
+		</div>
+	</div>
+	<div class="global_extra">
+		<a ui-sref="app.shop.add" class="btn btn_primary btn_add">
+			<i class="icon14_common add_white"></i>新建店铺</a>
+	</div>
+</div>
+
+<table class="table">
+	<thead class="thead">
+		<tr>
+			<th class="table_cell">店铺名称</th>
+			<th class="table_cell">店铺ID</th>
+			<th class="table_cell">状态</th>
+			<th class="table_cell">操作</th>
+		</tr>
+	</thead>
+	<tbody class="tbody">
+		<tr ng-repeat="shop in ctrl.shops">
+			<td class="table_cell">{{shop.name}}</td>
+			<td class="table_cell">{{shop.id}}</td>
+			<td class="table_cell">{{shop.status}}</td>
+			<td class="table_cell">
+				<a ui-sref="app.shop.edit({id: shop.id})">编辑</a>&nbsp;&nbsp;
+				<a ng-click="ctrl.deleteShop({id: shop.id})">删除</a>&nbsp;&nbsp;
+				<a ui-sref="app.shop.detail({id: shop.id})">店铺详情</a>
+			</td>
+		</tr>
+	</tbody>
+</table>

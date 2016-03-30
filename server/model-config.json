@@ -1,0 +1,49 @@
+{
+  "_meta": {
+    "sources": [
+      "../common/models",
+      "../node_modules/loopback-component-passport/lib/models"
+    ],
+    "mixins": [
+      "../common/mixins",
+      "./mixins",
+      "../node_modules/loopback-component-passport/lib/models"
+    ]
+  },
+  "user": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "accessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "userCredential": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "userIdentity": {
+    "dataSource": "mongodb",
+    "public": true
+  },  
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "Shop": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Share": {
+    "dataSource": "mongodb",
+    "public": true
+  }  
+}

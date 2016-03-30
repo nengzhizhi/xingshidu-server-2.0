@@ -1,0 +1,12 @@
+{
+  "name": "Comment",
+  "base": "PersistedModel",
+  "properties": {
+  },
+  "validations": [],
+  "relations": {
+  },
+  "acls": [
+  ],
+  "methods": {}
+}

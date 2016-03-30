@@ -1,0 +1,43 @@
+{
+  "name": "Participant",
+  "base": "PersistedModel",
+  "properties": {
+    "userId": {
+      "type": "string",
+      "required": true
+    },
+    "status": {
+      "type": "string"
+    },
+    "support": {
+      "type": "number"
+    },
+    "flower": {
+      "type": "number"
+    },
+    "followed": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "share":{
+      "type": "belongsTo",
+      "model": "Share",
+      "foreignKey": "shareId"
+    },
+    "photos": {
+      "type": "belongsTo",
+      "model": "Photo",
+      "foreignKey": "photoId"
+    },
+    "creater": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "userId"
+    }
+  },
+  "acls": [
+  ],
+  "methods": {}
+}

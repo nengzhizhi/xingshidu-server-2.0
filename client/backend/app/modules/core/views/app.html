@@ -1,0 +1,65 @@
+<div class="head">
+	<div class="head_box">
+		<div class="inner wrp">
+			<h1 class="logo">
+				<a href="/" title="">星视度</a></h1>
+			<div class="account">
+
+				<div class="account_meta account_info account_meta_primary">
+					<a href="#" class="nickname">{{currentUser.username}}</a>
+					<span class="type_wrp">
+						<a href="#" class="type icon_subscribe_label">管理员</a>
+						<a href="#" class="type icon_verify_label fail">未认证</a>
+					</span>
+					<a href="#">
+						<img src="../images/getheadimg" class="avatar">
+					</a>
+				</div>
+
+				<div class="account_meta account_logout account_meta_primary">
+					<a ui-sref="logout">退出</a>
+				</div>				
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="body">
+	<div class="container_box cell_layout side_l">
+		<div class="col_side">
+			<div class="menu_bar">
+				<dl class="menu_no_extra">
+					<dt class="menu_title">
+      			<i class="icon_menu" style="background:url(https://res.wx.qq.com/mpres/htmledition/images/icon/menu/icon_menu_function.png) no-repeat;"></i>店铺管理
+          </dt>
+					<dd class="menu_item ">
+						<a ui-sref="app.shop.list">店铺列表</a>
+					</dd>	
+				</dl>
+
+				<dl class="menu_no_extra">
+					<dt class="menu_title">
+      			<i class="icon_menu" style="background:url(https://res.wx.qq.com/mpres/htmledition/images/icon/menu/icon_menu_function.png) no-repeat;"></i>分享管理
+          </dt>
+					<dd class="menu_item ">
+						<a ui-sref="app.shop.list">分享列表</a>
+					</dd>	
+				</dl>
+
+				<dl class="menu menu_no_extra">
+					<dt class="menu_title">
+					  <i class="icon_menu" style="background:url(https://res.wx.qq.com/mpres/htmledition/images/icon/menu/icon_menu_setup.png
+	        ) no-repeat;"></i>用户管理
+					</dt>
+					<dd class="menu_item ">
+						<a ui-sref="app.users.list">用户列表</a>
+					</dd>								
+				</dl>				
+			</div>
+		</div>
+		<div class="col_main">
+			<div ui-view></div>
+		</div>
+	</div>
+</div>
